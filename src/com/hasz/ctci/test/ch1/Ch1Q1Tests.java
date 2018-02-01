@@ -25,7 +25,7 @@ public class Ch1Q1Tests {
 	
 	@Test
 	public void testOneDuplicate() {
-		assertFalse(Ch1Q1.isUnique("aabcdefghi"));
+		assertFalse(Ch1Q1.isUnique("abcdefghii"));
 	}
 	
 	@Test
