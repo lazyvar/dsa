@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class Ch1Q1 {
 
-	public static Boolean isUnique(String s) {
+	public static boolean isUnique(String s) {
 		Set<Character> foundCharacters = new HashSet<Character>();
 		
 		for (Character c : s.toCharArray()) {		
