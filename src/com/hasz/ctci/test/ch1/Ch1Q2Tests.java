@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import com.hasz.ctci.ch1.Ch1Q2;
+
 public class Ch1Q2Tests {
 
 	@Test
@@ -23,12 +25,12 @@ public class Ch1Q2Tests {
 	
 	@Test
 	public void testAreNotPermutations1() {
-		assertFalse(Ch1Q2.arePermutations("these are not the", "droids you are looking for");
+		assertFalse(Ch1Q2.arePermutations("these are not the", "droids you are looking for"));
 	}
 	
 	@Test
 	public void testAreNotPermutations2() {
-		assertFalse(Ch1Q2.arePermutations("abcdef", "hijklm");
+		assertFalse(Ch1Q2.arePermutations("abcdef", "hijklm"));
 	}
 	
 	@Test
