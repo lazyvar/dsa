@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import com.hasz.ctci.ch1.Ch1Q4;
+
 public class Ch1Q4Tests {
 
 	@Test
@@ -13,22 +15,22 @@ public class Ch1Q4Tests {
 	
 	@Test
 	public void testIsPalindromePermutation1() {
-		assertTrue(Ch1Q4.isPalindromePermutation("Tact Coa"));
+		assertTrue(Ch1Q4.isPalindromePermutation("car Race"));
 	}
 	
 	@Test
 	public void testIsPalindromePermutation2() {
-		assertTrue(Ch1Q4.isPalindromePermutation("hang a salami im a go lasagna hog"));
+		assertTrue(Ch1Q4.isPalindromePermutation("hang a Salami im a go Lasagna hog"));
 	}
 	
 	@Test
 	public void testIsNotPalindromePermutation1() {
-		assertTrue(Ch1Q4.isPalindromePermutation("this is not a palindrome"));
+		assertFalse(Ch1Q4.isPalindromePermutation("this is not a palindrome"));
 	}
 	
 	@Test
 	public void testIsNotPalindromePermutation2() {
-		assertTrue(Ch1Q4.isPalindromePermutation("fly eagles fly"));
+		assertFalse(Ch1Q4.isPalindromePermutation("fly eagles fly"));
 	}
 
 }
