@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.hasz.ctci.ch1.Ch1Q2;
+import com.hasz.ctci.main.ch1.Ch1Q2;
 
 public class Ch1Q2Tests {
 

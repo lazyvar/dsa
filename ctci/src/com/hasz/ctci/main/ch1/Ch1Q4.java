@@ -1,4 +1,4 @@
-package com.hasz.ctci.ch1;
+package com.hasz.ctci.main.ch1;
 
 import java.util.HashMap;
 import java.util.Map;
