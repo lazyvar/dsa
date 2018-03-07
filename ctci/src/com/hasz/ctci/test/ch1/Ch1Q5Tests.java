@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import com.hasz.ctci.main.ch1.Ch1Q5;
+
 public class Ch1Q5Tests {
 
 	@Test
@@ -23,7 +25,21 @@ public class Ch1Q5Tests {
 	
 	@Test
 	public void testBook4() {
-		assertTrue(Ch1Q5.isSingleEdit("pale", "bake"));
+		assertFalse(Ch1Q5.isSingleEdit("pale", "bake"));
+	}
+	
+	@Test
+	public void testSame() {
+		assertTrue(Ch1Q5.isSingleEdit("antarctica", "antarctica"));
+	}
+	
+	@Test
+	public void testDifferent() {
+		assertFalse(Ch1Q5.isSingleEdit("antarctica", "hawaii"));
 	}
 
+	@Test
+	public void testTwoEdit() {
+		assertFalse(Ch1Q5.isSingleEdit("mack", "zach"));
+	}
 }
