@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.hasz.ctci.main.ch1.Ch1Q7;
 import com.hasz.ctci.main.ch1.Ch1Q8;
 
 public class Ch1Q8Tests {
