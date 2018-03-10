@@ -33,7 +33,7 @@ public class SinglyLinkedList {
 			n = n.next;
 		}
 		
-		n.next = new SinglyLinkedNode(d);;
+		n.next = new SinglyLinkedNode(d);
 	}
 	
 	public boolean equals(int[] array) {
