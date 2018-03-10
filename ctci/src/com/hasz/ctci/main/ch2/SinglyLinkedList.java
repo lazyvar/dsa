@@ -4,9 +4,9 @@ public class SinglyLinkedList {
 
 	public SinglyLinkedNode head;
 	
-	public SinglyLinkedList(int[] list) throws Exception {
+	public SinglyLinkedList(int[] list) {
 		if (list.length == 0) {
-			throw new Exception("list empty");
+			return;
 		}
 		
 		head = new SinglyLinkedNode(list[0]);
