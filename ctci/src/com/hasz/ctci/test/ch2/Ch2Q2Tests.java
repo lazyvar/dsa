@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.hasz.ctci.main.ch2.Ch2Q1;
+import com.hasz.ctci.main.ch2.Ch2Q2;
 import com.hasz.ctci.main.ch2.SinglyLinkedList;
 import com.hasz.ctci.main.ch2.SinglyLinkedNode;
 
@@ -15,7 +15,7 @@ public class Ch2Q2Tests {
 		int[] list = {};
 		SinglyLinkedList linkedList = new SinglyLinkedList(list);
 		
-		SinglyLinkedNode node = Ch2Q2.kthToLast(3);
+		SinglyLinkedNode node = Ch2Q2.kthToLast(linkedList, 3);
 				
 		assertNull(node);
 	}
@@ -25,7 +25,7 @@ public class Ch2Q2Tests {
 		int[] list = {1, 2, 3, 4, 5};
 		SinglyLinkedList linkedList = new SinglyLinkedList(list);
 		
-		SinglyLinkedNode node = Ch2Q2.kthToLast(10);
+		SinglyLinkedNode node = Ch2Q2.kthToLast(linkedList, 10);
 				
 		assertNull(node);
 	}
@@ -35,9 +35,9 @@ public class Ch2Q2Tests {
 		int[] list = {1, 2, 3, 4, 5};
 		SinglyLinkedList linkedList = new SinglyLinkedList(list);
 		
-		SinglyLinkedNode node = Ch2Q2.kthToLast(4);
+		SinglyLinkedNode node = Ch2Q2.kthToLast(linkedList, 5);
 				
-		assertNull(node);
+		assertEquals(1, node.data);
 	}
 	
 	@Test
@@ -45,9 +45,9 @@ public class Ch2Q2Tests {
 		int[] list = {1, 2, 3, 4, 5};
 		SinglyLinkedList linkedList = new SinglyLinkedList(list);
 		
-		SinglyLinkedNode node = Ch2Q2.kthToLast(2);
+		SinglyLinkedNode node = Ch2Q2.kthToLast(linkedList, 3);
 				
-		assertNull(node);
+		assertEquals(3, node.data);
 	}
 	
 	@Test
@@ -55,7 +55,17 @@ public class Ch2Q2Tests {
 		int[] list = {1, 2, 3, 4, 5};
 		SinglyLinkedList linkedList = new SinglyLinkedList(list);
 		
-		SinglyLinkedNode node = Ch2Q2.kthToLast(0);
+		SinglyLinkedNode node = Ch2Q2.kthToLast(linkedList, 1);
+				
+		assertEquals(5, node.data);
+	}
+
+	@Test
+	public void testZerothToLast() {
+		int[] list = {1, 2, 3, 4, 5};
+		SinglyLinkedList linkedList = new SinglyLinkedList(list);
+		
+		SinglyLinkedNode node = Ch2Q2.kthToLast(linkedList, 0);
 				
 		assertNull(node);
 	}
