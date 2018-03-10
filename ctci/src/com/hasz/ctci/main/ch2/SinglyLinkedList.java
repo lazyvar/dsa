@@ -36,4 +36,20 @@ public class SinglyLinkedList {
 		n.next = new SinglyLinkedNode(d);;
 	}
 	
+	public boolean equals(int[] array) {
+		SinglyLinkedNode n = head;
+		int count = 0;
+		
+		while (n != null) {
+			if (n.data == array[count]) {
+				n = n.next;
+				count++;
+			} else {
+				return false;
+			}
+		}
+		
+		return true;
+	}
+
 }

@@ -9,22 +9,6 @@ import com.hasz.ctci.main.ch2.SinglyLinkedList;
 import com.hasz.ctci.main.ch2.SinglyLinkedNode;
 
 public class Ch2Q1Tests {
-
-	private boolean arrayEqualsList(int [] expected, SinglyLinkedList actual) {
-		SinglyLinkedNode n = actual.head;
-		int count = 0;
-		
-		while (n != null) {
-			if (n.data == expected[count]) {
-				n = n.next;
-				count++;
-			} else {
-				return false;
-			}
-		}
-		
-		return true;
-	}
 	
 	@Test
 	public void testEmpty() {
@@ -35,7 +19,7 @@ public class Ch2Q1Tests {
 		
 		int[] expected = {};
 		
-		assertTrue(arrayEqualsList(expected, linkedList));
+		assertTrue(linkedList.equals(expected));
 	}
 	
 	@Test
@@ -47,7 +31,7 @@ public class Ch2Q1Tests {
 		
 		int[] expected = {1, 3, 5, 2};
 		
-		assertTrue(arrayEqualsList(expected, linkedList));
+		assertTrue(linkedList.equals(expected));
 	}
 	
 	@Test
@@ -59,7 +43,7 @@ public class Ch2Q1Tests {
 		
 		int[] expected = {1, 2, 3, 4, 5, 6, 7};
 		
-		assertTrue(arrayEqualsList(expected, linkedList));
+		assertTrue(linkedList.equals(expected));
 	}
 	
 	@Test
@@ -71,7 +55,7 @@ public class Ch2Q1Tests {
 		
 		int[] expected = {1};
 		
-		assertTrue(arrayEqualsList(expected, linkedList));
+		assertTrue(linkedList.equals(expected));
 	}
 
 }
