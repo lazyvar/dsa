@@ -19,15 +19,21 @@ public class SinglyLinkedList {
 		}
 	}
 	
+	public void insertFirst(int d) {
+		SinglyLinkedNode oldHead = head;
+		
+		head = new SinglyLinkedNode(d);
+		head.next = oldHead;
+	}
+	
 	public void insertLast(int d) {
-		SinglyLinkedNode newNode = new SinglyLinkedNode(d);
 		SinglyLinkedNode n = head;
 		
 		while (n.next != null) {
 			n = n.next;
 		}
 		
-		n.next = newNode;
+		n.next = new SinglyLinkedNode(d);;
 	}
 	
 }
