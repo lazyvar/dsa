@@ -2,7 +2,7 @@ package com.hasz.ctci.main.ch2;
 
 public class SinglyLinkedList {
 
-	SinglyLinkedNode head;
+	public SinglyLinkedNode head;
 	
 	public SinglyLinkedList(int[] list) throws Exception {
 		if (list.length == 0) {
