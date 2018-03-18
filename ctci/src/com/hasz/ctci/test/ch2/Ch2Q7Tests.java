@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import com.hasz.ctci.main.ch2.Ch2Q2;
+import com.hasz.ctci.main.ch2.Ch2Q7;
 import com.hasz.ctci.main.ch2.SinglyLinkedList;
 import com.hasz.ctci.main.ch2.SinglyLinkedNode;
 
@@ -71,7 +72,7 @@ public class Ch2Q7Tests {
 		SinglyLinkedList linkedList2 = new SinglyLinkedList(list2);
 		
 		SinglyLinkedNode list1node4 = Ch2Q2.kthToLast(linkedList1, 1);
-		SinglyLinkedNode list2node6 = Ch2Q2.kthToLast(linkedList2, 1);
+		SinglyLinkedNode list2node6 = Ch2Q2.kthToLast(linkedList2, 3);
 		
 		list1node4.next = list2node6;
 		
