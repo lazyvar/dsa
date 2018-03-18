@@ -45,15 +45,24 @@ public class Stack {
 		while (!isEmpty()) {
 			int next = pop();
 			
-			if (next > buffer.peek()) {
+			if (buffer.isEmpty()) {
+				buffer.push(next);
+				continue;
+			}
+			
+			if (next >= buffer.peek()) {
 				buffer.push(next);
 			} else {
-				while (buffer.peek() < next) {
+				while (!buffer.isEmpty() && next < buffer.peek()) {
 					push(buffer.pop());
 				}
 				
 				buffer.push(next);
 			}
+		}
+		
+		while(!buffer.isEmpty()) {
+			push(buffer.pop());
 		}
 	}
 }
