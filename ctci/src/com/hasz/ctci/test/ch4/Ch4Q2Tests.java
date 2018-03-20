@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.hasz.ctci.main.ch4.BinaryNode;
+import com.hasz.ctci.main.ch4.BinaryTreeNode;
 import com.hasz.ctci.main.ch4.Ch4Q2;
 
 public class Ch4Q2Tests {
@@ -13,7 +13,7 @@ public class Ch4Q2Tests {
 	public void testEmpty() {
 		int[] sortedArray = {};
 		
-		BinaryNode root = Ch4Q2.minTreeFrom(sortedArray);
+		BinaryTreeNode root = Ch4Q2.minTreeFrom(sortedArray);
 		
 		assertNull(root);
 	}
@@ -22,7 +22,7 @@ public class Ch4Q2Tests {
 	public void testOne() {
 		int[] sortedArray = {1};
 		
-		BinaryNode root = Ch4Q2.minTreeFrom(sortedArray);
+		BinaryTreeNode root = Ch4Q2.minTreeFrom(sortedArray);
 		
 		assertEquals(1, root.data);
 		assertNull(root.left);
@@ -33,7 +33,7 @@ public class Ch4Q2Tests {
 	public void testTwo() {
 		int[] sortedArray = {8, 13};
 		
-		BinaryNode root = Ch4Q2.minTreeFrom(sortedArray);
+		BinaryTreeNode root = Ch4Q2.minTreeFrom(sortedArray);
 		
 		assertEquals(13, root.data);
 		assertEquals(8, root.left.data);
@@ -44,7 +44,7 @@ public class Ch4Q2Tests {
 	public void testSmall() {
 		int[] sortedArray = {1, 2, 3};
 		
-		BinaryNode root = Ch4Q2.minTreeFrom(sortedArray);
+		BinaryTreeNode root = Ch4Q2.minTreeFrom(sortedArray);
 		
 		assertEquals(2, root.data);
 		assertEquals(1, root.left.data);
@@ -55,7 +55,7 @@ public class Ch4Q2Tests {
 	public void testMedium() {
 		int[] sortedArray = {1, 2, 3, 5, 8, 13};
 		
-		BinaryNode root = Ch4Q2.minTreeFrom(sortedArray);
+		BinaryTreeNode root = Ch4Q2.minTreeFrom(sortedArray);
 		
 		assertEquals(5, root.data);
 		assertEquals(2, root.left.data);
@@ -70,7 +70,7 @@ public class Ch4Q2Tests {
 		int[] sortedArray = {1, 2, 3, 5, 8, 13,
 							21, 34, 55, 89, 144};
 		
-		BinaryNode root = Ch4Q2.minTreeFrom(sortedArray);
+		BinaryTreeNode root = Ch4Q2.minTreeFrom(sortedArray);
 		
 		assertEquals(13, root.data);
 		assertEquals(3, root.left.data);
