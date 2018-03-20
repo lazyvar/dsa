@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import com.hasz.ctci.main.ch2.SinglyLinkedList;
 import com.hasz.ctci.main.ch4.BinaryTreeNode;
+import com.hasz.ctci.main.ch4.Ch4Q3;
 
 public class Ch4Q3Tests {
 
@@ -28,6 +29,7 @@ public class Ch4Q3Tests {
 		assertEquals(1, nodesByDepth.get(0).head.data);
 		assertNull(nodesByDepth.get(0).head.next);
 	}
+	
 	@Test
 	public void testSmall() {
 		BinaryTreeNode root = new BinaryTreeNode(1);
@@ -39,11 +41,11 @@ public class Ch4Q3Tests {
 		assertEquals(2, nodesByDepth.size());
 		
 		/* depth 0 */
-		assertEquals(0, nodesByDepth.get(0).head.data);
+		assertEquals(1, nodesByDepth.get(0).head.data);
 		assertNull(nodesByDepth.get(0).head.next);
 		
 		/* depth 1 */
-		assertEquals(1, nodesByDepth.get(1).head.data);
+		assertEquals(0, nodesByDepth.get(1).head.data);
 		assertEquals(2, nodesByDepth.get(1).head.next.data);
 		assertNull(nodesByDepth.get(1).head.next.next);
 	}

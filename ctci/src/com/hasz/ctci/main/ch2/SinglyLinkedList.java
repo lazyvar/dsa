@@ -4,6 +4,10 @@ public class SinglyLinkedList {
 
 	public SinglyLinkedNode head;
 	
+	public SinglyLinkedList() {
+		// happy
+	}
+	
 	public SinglyLinkedList(int[] list) {
 		if (list.length == 0) {
 			return;
@@ -28,12 +32,18 @@ public class SinglyLinkedList {
 	
 	public void insertLast(int d) {
 		SinglyLinkedNode n = head;
+		SinglyLinkedNode tail = new SinglyLinkedNode(d);
+		
+		if (n == null) {
+			head = tail;
+			return;
+		}
 		
 		while (n.next != null) {
 			n = n.next;
 		}
 		
-		n.next = new SinglyLinkedNode(d);
+		n.next = tail;
 	}
 	
 	public boolean equals(int[] array) {
