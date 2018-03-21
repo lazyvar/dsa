@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import com.hasz.ctci.main.ch4.BinaryTreeNode;
+import com.hasz.ctci.main.ch4.ChQ4;
 
 public class Ch4Q4Tests {
 
@@ -35,14 +36,29 @@ public class Ch4Q4Tests {
 		root.right = new BinaryTreeNode(100);
 		root.left.left = new BinaryTreeNode(99);
 		root.left.left.left = new BinaryTreeNode(99);
+		root.left.left.right = new BinaryTreeNode(99);
+		root.right.right = new BinaryTreeNode(88);
+		root.right.right.right = new BinaryTreeNode(88);
+		root.right.right.left = new BinaryTreeNode(88);
+		
+		assertFalse(ChQ4.isBalanced(root));
+	}
+	
+	@Test
+	public void testUnbalanced1() {
+		BinaryTreeNode root = new BinaryTreeNode(77);
+		root.left = new BinaryTreeNode(33);
+		root.right = new BinaryTreeNode(100);
+		root.left.left = new BinaryTreeNode(99);
+		root.left.left.left = new BinaryTreeNode(99);
 		root.right.right = new BinaryTreeNode(88);
 		root.right.right.right = new BinaryTreeNode(88);
 		
-		assertTrue(ChQ4.isBalanced(root));
+		assertFalse(ChQ4.isBalanced(root));
 	}
 
 	@Test
-	public void testUnbalanaced() {
+	public void testUnbalanaced2() {
 		BinaryTreeNode root = new BinaryTreeNode(77);
 		root.left = new BinaryTreeNode(33);
 		root.right = new BinaryTreeNode(100);
