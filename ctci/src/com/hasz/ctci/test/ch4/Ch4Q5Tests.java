@@ -6,8 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 import com.hasz.ctci.main.ch4.BinaryTreeNode;
-import com.hasz.ctci.main.ch4.ChQ4;
-
+import com.hasz.ctci.main.ch4.Ch4Q5;
 class Ch4Q5Tests {
 
 	@Test
@@ -53,7 +52,7 @@ class Ch4Q5Tests {
 		root.right.right.left = new BinaryTreeNode(88);
 		root.right.right.right = new BinaryTreeNode(120);
 		
-		assertFalse(Ch4Q5.isValidBst(root));
+		assertTrue(Ch4Q5.isValidBst(root));
 	}
 	
 	@Test
